@@ -1,0 +1,13 @@
+# English messages
+
+global.code.lang.head=en
+global.home.html.author=Raphaël Marbeck
+
+index.html.title=Watch Next Store
+index.html.description=Selling, purchasing, broking of luxuary watches. 
+index.html.keywords=watches, high end, selling, purchasing, broking, broker, consignment
+
+navbar.link.about=About
+navbar.link.services=Our services
+navbar.link.portfolio=Our watches
+navbar.link.contact=Contact us

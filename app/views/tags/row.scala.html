@@ -1,0 +1,1 @@
+@(args: (Symbol,Any)*)(body: => Html)@div_with_class(args.toMap.get('class).map("row "+_.toString).getOrElse("row"), args.filter(arg => arg._1 != 'class):_*) {@body}<!-- end of row -->

@@ -1,0 +1,51 @@
+@import "_common.less";
+
+#product {
+	.product-story-inner {
+		.label {
+			font-size: 90%;
+			font-weight: normal;
+			color: grey;
+			text-transform: uppercase;
+		}
+	
+		.label::after { 
+			content: " : ";
+		}
+	
+		.value {
+			font-size: 110%;
+			display: inline-block;
+		}
+	
+		.value:first-letter {
+			text-transform: uppercase;
+		}
+	
+		ul {
+			margin: 10px 0;
+			padding-left: 0;
+			list-style-type: none;
+		}
+	}
+	
+	.row-cart-actions {
+		.btn-dark-success {
+			background-color: #58d68d !important;
+		}
+		
+		.btn-dark, .btn-gray {
+			min-width: 165px;
+		}
+	}
+}
+
+#purchase {
+	.orderStep li {
+	    width: 33%;
+	}
+	
+	#BillingInformation label {
+		padding-right: 10px;
+	}
+}

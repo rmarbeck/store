@@ -1,0 +1,14 @@
+# Messages en francais
+
+global.code.lang.head=fr
+global.home.html.author=Raphaël Marbeck
+
+index.html.title=Boutique Watch Next
+index.html.description=Vente, rachat, courtage de montres de luxe. 
+index.html.keywords=montres, luxe, achat, vente, courtage, courtier, dépôt
+
+navbar.link.about=A propos
+navbar.link.services=Nos services
+navbar.link.portfolio=Nos montres
+navbar.link.contact=Nous contacter
+

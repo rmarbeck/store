@@ -1,0 +1,840 @@
+@()
+@import tags._
+
+@end_scripts = {
+
+@local_script("javascripts/magnific/jquery.magnific-popup.min.js") { }
+
+<script>
+
+    // For Demo purposes only
+    [].slice.call(document.querySelectorAll('nav.nav-narrow-svg > a')).forEach(function (el) {
+        el.addEventListener('click', function (ev) {
+            ev.preventDefault();
+        });
+    });
+
+    // productShowCase  carousel
+    var pic = $(".product-images-carousel");
+
+    pic.owlCarousel({
+        autoPlay: false,
+        lazyLoad: true,
+        navigation: false,
+        paginationSpeed: 1000,
+        goToFirstSpeed: 2000,
+        singleItem: true,
+        autoHeight: true
+
+
+    });
+
+    // Custom Navigation Events
+    $(".product-images-carousel-wrapper nav.slider-nav .next").click(function () {
+        pic.trigger('owl.next');
+    })
+    $(".product-images-carousel-wrapper nav.slider-nav  .prev").click(function () {
+        pic.trigger('owl.prev');
+    })
+
+</script>
+
+
+@local_script("javascripts/intense-images-master/intense.js") { }
+
+<script>
+    var elements = document.querySelectorAll('.zoom-image-overly');
+    Intense(elements);
+</script>
+
+@local_script("javascripts/skrollr.min.js") { }
+
+<script type="text/javascript">
+    var isMobile = function () {
+        //console.log("Navigator: " + navigator.userAgent);
+        return /(iphone|ipod|ipad|android|blackberry|windows ce|palm|symbian)/i.test(navigator.userAgent);
+    };
+
+    if (isMobile()) {
+        // For  mobile , ipad, tab
+
+    } else {
+
+        if ($(window).width() < 768) {
+        } else {
+            var s = skrollr.init({forceHeight: false});
+        }
+
+    }
+
+
+</script>
+
+
+<!-- Reveal Animations When You Scroll  -->
+@local_script("javascripts/wow.min.js") { }
+<script>
+    new WOW().init();
+</script>
+
+}
+
+
+@layouts.main("product", "product", Html(""), end_scripts) {
+
+<section class="section-product-info">
+    <div class="container-1400 container   main-container product-details-container">
+
+
+        <div class="row">
+
+            <!-- left column -->
+
+            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                <div class="product-images-carousel-wrapper">
+                    <nav class="slider-nav has-white-bg nav-narrow-svg">
+                        <a class="prev">
+                            <span class="icon-wrap"></span>
+
+                        </a>
+                        <a class="next">
+                            <span class="icon-wrap"></span>
+                        </a>
+                    </nav>
+
+
+                    <div class="product-images-carousel">
+
+                        <div class="product-carousel-item">
+                            <span class="zoom-image-overly"
+                                  data-image="images/product_details/hi-res/4.jpg">
+
+                            </span>
+
+                            <img class="img-responsive product-carousel-item-img lazyOwl "
+                                 data-src='images/product_details/low-res/4.jpg' alt='Image Title'/>
+                        </div>
+
+                        <div class="product-carousel-item">
+          <span class="zoom-image-overly"
+                data-image="images/product_details/hi-res/2.jpg">
+
+                            </span>
+
+                            <img class="img-responsive product-carousel-item-img lazyOwl"
+                                 data-src='images/product_details/low-res/2.jpg' alt='Image Title'/>
+                        </div>
+
+                        <div class="product-carousel-item">
+          <span class="zoom-image-overly"
+                data-image="images/product_details/hi-res/3.jpg">
+
+                            </span>
+
+                            <img class="img-responsive product-carousel-item-img lazyOwl"
+                                 data-src='images/product_details/low-res/3.jpg' alt='Image Title'/>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!--/ left column end -->
+
+
+            <!-- right column -->
+            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                <div class="product-details-info-wrapper">
+
+
+                    <h2 class="product-details-product-title">IWC Portugaise 7 Jours</h2>
+
+                    <div class="product-price">
+                        <span class="price-sales">7 890€</span>
+                        <span class="price-standard">8900 €</span>
+                        <span class="price-tag">TTC</span>
+                    </div>
+
+                    <div class="row row-cart-actions clearfix ">
+                        <div class="col-sm-12 ">
+
+                            <a class="btn btn-block btn-dark btn-dark-success" href="purchase">
+                                ACHETER
+                            </a>
+                        </div>
+
+                    </div>
+                    
+                    <div class="row row-cart-actions clearfix ">
+                        <div class="col-lg-6 ">
+
+                            <a class="btn btn-block btn-dark">
+                                NOUS CONTACTER
+                            </a>
+                        </div>
+						<div class="col-lg-6 ">
+
+                            <a class="btn btn-block btn-gray">
+                                REPRISE
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="clear"></div>
+
+
+                    <div class="product-share clearfix">
+                        <p> SHARE </p>
+
+                        <div class="socialIcon">
+                            <a href="#"> <i class="fa fa-facebook"></i></a>
+                            <a href="#"> <i class="fa fa-twitter"></i></a>
+                            <a href="#"> <i class="fa fa-google-plus"></i></a>
+                            <a href="#"> <i class="fa fa-pinterest"></i></a></div>
+
+                        <br>
+                    </div>
+
+
+                    <div style="clear:both"></div>
+
+
+                </div>
+            </div>
+            <!--/ right column end -->
+
+        </div>
+        <!--/.row-->
+
+
+        <div style="clear:both"></div>
+
+
+    </div>
+    <!-- /.product-details-container -->
+</section>
+
+<section class="section-product-info-bottom">
+    <div class="product-details-bottom-bar">
+        <div class="container-1400 container">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs flat list-unstyled list-inline social-inline" role="tablist">
+                        <li role="presentation" class="active"><a href="#tab1" aria-controls="home" role="tab"
+                                                                  data-toggle="tab">
+                            Description</a></li>
+                        <li role="presentation"><a href="#tab2" aria-controls="profile" role="tab" data-toggle="tab">
+                            Fiche détaillée</a></li>
+                        <li role="presentation"><a href="#tab3" aria-controls="messages" role="tab" data-toggle="tab">
+                            Garantie et de livraison</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="review-title-bar">
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+
+<section class="section-tab-content">
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+            <div class="product-story-inner ">
+
+                <div class="container">
+
+                    <div class="row ">
+
+                        <div class="col-lg-12 ">
+                            <div class="hw100 display-table">
+                                <div class="hw100 display-table-cell">
+
+
+                                    <div class="product-story-info-box">
+                                        <div class="product-story-info-text ">
+
+
+                                            <h5 class="subtitle">A propos</h5>
+
+                                            <h3 class="title">Description</h3>
+
+                                            <p class="desc">
+
+                                                Portugaise 7 jours avec aiguilles et chiffres bleuis. </p>
+
+                                            <p><strong> Montre d'occasion</strong> <br>
+                                                Livrée avec boite et papiers.</p>
+                                                
+                                                <a class="btn btn-default btn-link" href="#tab2" aria-controls="profile" role="tab" data-toggle="tab">+ d'infos <i
+                                                    class="fa fa-arrow-circle-o-right"></i> </a>
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab2">
+
+
+            <div class="product-story-inner ">
+
+                <div class="container">
+
+                    <div class="row has-equal-height-child">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  is-equal">
+                            <div class="hw100 display-table">
+                                <div class="hw100 display-table-cell">
+
+
+                                    <div class="product-story-info-box">
+                                        <div class="product-story-info-text " data-wow-duration=".8s"
+                                             data-wow-delay="0">
+
+
+                                            <h3 class="title">Fiche détaillée</h3>
+
+											<ul>
+					                        	<li><span class="label">référence</span><span class="value">116520</span></li>
+					                        	<li><span class="label">boitier</span><span class="value">acier</span></li>
+					                        	<li><span class="label">diamètre</span><span class="value">42mm</span></li>
+					                        	<li><span class="label">mouvement</span><span class="value">remontage automatique</span></li>
+					                        	<li><span class="label">bracelet(s)</span><span class="value">acier oyster</span></li>
+					                        	<li><span class="label">année</span><span class="value">2004</span></li>
+					                        	<li><span class="label">état</span><span class="value">excellent (montre d'occasion)</span></li>
+					                        	<li><span class="label">papiers d'origine</span><span class="value"><abbr title="La montre dispose de sa carte de garantie établie lors de son achat neuve.">oui</abbr></span></li>
+					                        	<li><span class="label">boite d'origine</span><span class="value"><abbr title="La montre dispose de sa boite d'origine.">oui</abbr></span></li>
+					                        	<li><span class="label">délais</span><span class="value">la montre est disponible</span></li>
+					                       	</ul>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tab3">
+            <div class="product-story-inner ">
+
+                <div class="container">
+
+                    <div class="row has-equal-height-child">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  is-equal">
+                            <div class="hw100 display-table">
+                                <div class="hw100 display-table-cell">
+
+
+                                    <div class="product-story-info-box">
+                                        <div class="product-story-info-text wow fadeInLeft" data-wow-duration=".8s"
+                                             data-wow-delay="0">
+
+                                            <h3 class="title"> Fit & Care </h3>
+
+                                            <div class="inner-content">
+                                                <p>
+                                                    La montre est garantie pendant 2 ans et peut être livrée à domicile sur Paris et sa région. Envoi sécurisé pour les autres destinations.
+                                                </p>
+                                            </div>
+
+
+                                            <a class="btn btn-default btn-link" data-target="#modal-size-guide"
+                                               data-toggle="modal">Voir nos conditions de vente <i
+                                                    class="fa fa-arrow-circle-o-right"></i> </a>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- product details additional section -->
+
+
+<!-- /.section-review -->
+
+<section class=" section-similar-product graybg">
+    <div class="container">
+
+        <div class="hero-section-header ">
+            <h3 class="hero-section-title">Montres associées</h3>
+        </div>
+
+
+        <div class="section-content">
+            <div class="row has-equal-height-child">
+                <div class="product-item item-flat col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12">
+                    <div class="product product-item-inner">
+
+                        <div class="imageHover hasCart">
+                            <a href="product-details.html">
+                                <img class="img-responsive primaryImage" alt="img" src="images/product/30.jpg">
+                                <img class="img-responsive secondaryImage" alt="img" src="images/product/30.jpg"></a>
+                        </div>
+
+
+                        <div class="prod-details">
+                              <p class="title">
+                                <a href="product-details-style5-4.1-with-zoom.html" title=""> Rolex Daytona </a>
+                            </p>
+
+
+                            <p class="product-flat-info">
+                                <span class="product-curreent-price">
+                                8 900€
+                                </span>
+                                &nbsp;|&nbsp;
+                                <span class="product-model">116520 </span></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="product-item item-flat col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12">
+                    <div class="product product-item-inner">
+
+
+                        <a data-placement="left" data-original-title="Add to Wishlist" data-toggle="tooltip"
+                           class="add-fav wisthlist-flat tooltipHere">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
+
+                        <div class="imageHover hasCart">
+                            <a href="product-details.html">
+                                <img class="img-responsive primaryImage" alt="img" src="images/product/34.jpg">
+                                <img class="img-responsive secondaryImage" alt="img" src="images/product/34.jpg"></a>
+
+                            <div class="product-btn-box">
+                                <a class="btn btn-product-flat btn-primary">
+                                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="prod-details">
+                           <p class="title">
+                                <a href="product-details-style5-4.1-with-zoom.html" title="title">Women Flat TShirt</a>
+                            </p>
+
+                            <p class="product-flat-info">
+                                <span class="product-curreent-price">
+                                $100.00
+                                </span>
+                                &nbsp;|&nbsp;
+                                <span class="product-model">Mixed Grey </span></p>
+
+                            <div class="product-color">
+                                <a style="background-color:#f1f40e"> </a>
+                                <a style="background-color:#FE6FC3"> </a>
+                                <a style="background-color:#4EC67F"> </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="product-item item-flat col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12">
+                    <div class="product product-item-inner">
+
+
+                        <a data-placement="left" data-original-title="Add to Wishlist" data-toggle="tooltip"
+                           class="add-fav wisthlist-flat tooltipHere">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
+
+                        <div class="imageHover hasCart">
+                            <a href="product-details.html">
+                                <img class="img-responsive primaryImage" alt="img" src="images/product/36.jpg">
+                                <img class="img-responsive secondaryImage" alt="img" src="images/product/36.jpg"></a>
+
+                            <div class="product-btn-box">
+                                <a class="btn btn-product-flat btn-primary">
+                                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="prod-details">
+                           <p class="title">
+                                <a href="product-details-style5-4.1-with-zoom.html" title="title">Women Flat TShirt</a>
+                            </p>
+
+                            <p class="product-flat-info">
+                                <span class="product-curreent-price">
+                                $100.00
+                                </span>
+                                &nbsp;|&nbsp;
+                                <span class="product-model">Mixed Grey </span></p>
+
+                            <div class="product-color">
+                                <a style="background-color:#73A44A"> </a>
+                                <a style="background-color:#adadad"> </a>
+                                <a style="background-color:#4EC67F"> </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="product-item item-flat col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12">
+                    <div class="product product-item-inner">
+
+
+                        <a data-placement="left" data-original-title="Add to Wishlist" data-toggle="tooltip"
+                           class="add-fav wisthlist-flat tooltipHere">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
+
+                        <div class="imageHover hasCart">
+                            <a href="product-details.html">
+                                <img class="img-responsive primaryImage" alt="img" src="images/product/36.jpg">
+                                <img class="img-responsive secondaryImage" alt="img" src="images/product/36.jpg"></a>
+
+                            <div class="product-btn-box">
+                                <a class="btn btn-product-flat btn-primary">
+                                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="prod-details">
+                              <p class="title">
+                                <a href="product-details-style5-4.1-with-zoom.html" title=""> Men Flat TShirt </a>
+                            </p>
+
+
+                            <p class="product-flat-info">
+                                <span class="product-curreent-price">
+                                $100.00
+                                </span>
+                                &nbsp;|&nbsp;
+                                <span class="product-model">Mixed Grey </span></p>
+
+                            <div class="product-color">
+                                <a style="background-color:#f1f40e"> </a>
+                                <a style="background-color:#adadad"> </a>
+                                <a style="background-color:#4EC67F"> </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!--/.section-similar-product-->
+
+<!-- Modal Login start -->
+<div class="modal signUpContent fade" id="ModalLogin" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                <h3 class="modal-title-site text-center"> Login to TSHOP </h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group login-username">
+                    <div>
+                        <input name="log" id="login-user" class="form-control input" size="20"
+                               placeholder="Enter Username" type="text">
+                    </div>
+                </div>
+                <div class="form-group login-password">
+                    <div>
+                        <input name="Password" id="login-password" class="form-control input" size="20"
+                               placeholder="Password" type="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <div class="checkbox login-remember">
+                            <label>
+                                <input name="rememberme" value="forever" checked="checked" type="checkbox">
+                                Remember Me </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input name="submit" class="btn  btn-block btn-lg btn-primary" value="LOGIN" type="submit">
+                    </div>
+                </div>
+                <!--userForm-->
+
+            </div>
+            <div class="modal-footer">
+                <p class="text-center"> Not here before? <a data-toggle="modal" data-dismiss="modal"
+                                                            href="#ModalSignup"> Sign Up. </a> <br>
+                    <a href="forgot-password.html"> Lost your password? </a></p>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+
+    </div>
+    <!-- /.modal-dialog -->
+
+</div>
+<!-- /.Modal Login -->
+
+<!-- Modal Signup start -->
+<div class="modal signupcontent fade" id="modalsignup" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                <h3 class="modal-title-site text-center"> register </h3>
+            </div>
+            <div class="modal-body">
+                <div class="control-group"><a class="fb_button btn  btn-block btn-lg " href="#"> signup with
+                    facebook </a></div>
+                <h5 style="padding:10px 0 10px 0;" class="text-center"> or </h5>
+
+                <div class="form-group reg-username">
+                    <div>
+                        <input name="login" class="form-control input" size="20" placeholder="enter username"
+                               type="text">
+                    </div>
+                </div>
+                <div class="form-group reg-email">
+                    <div>
+                        <input name="reg" class="form-control input" size="20" placeholder="enter email" type="text">
+                    </div>
+                </div>
+                <div class="form-group reg-password">
+                    <div>
+                        <input name="password" class="form-control input" size="20" placeholder="password"
+                               type="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <div class="checkbox login-remember">
+                            <label>
+                                <input name="rememberme" id="rememberme" value="forever" checked="checked"
+                                       type="checkbox">
+                                remember me </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input name="submit" class="btn  btn-block btn-lg btn-primary" value="register" type="submit">
+                    </div>
+                </div>
+                <!--userform-->
+
+            </div>
+            <div class="modal-footer">
+                <p class="text-center"> already member? <a data-toggle="modal" data-dismiss="modal" href="#modallogin">
+                    sign in </a></p>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+
+    </div>
+    <!-- /.modal-dialog -->
+
+</div>
+
+<!-- Modal review start -->
+<div class="modal  fade" id="modal-size-guide" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                <h3 class="modal-title-site text-center">SIZE GUIDE </h3>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="sizeguide-table table table-bordered">
+                    <thead>
+                    <tr>
+                        <th colspan="6">Women's Clothing</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>Size</th>
+                        <td>X-Small</td>
+                        <td>Small</td>
+                        <td>Medium</td>
+                        <td>Large</td>
+                        <td>X-Large</td>
+                    </tr>
+                    <tr>
+                        <th>UK</th>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <th>USA</th>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <th>JAPAN</th>
+                        <td>7</td>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <th>Bust(cm)</th>
+                        <td>84</td>
+                        <td>88</td>
+                        <td>92</td>
+                        <td>98</td>
+                        <td>104</td>
+                    </tr>
+                    <tr>
+                        <th>Bust(inches)</th>
+                        <td>33</td>
+                        <td>34.5</td>
+                        <td>36</td>
+                        <td>38.5</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th>Waist(cm)</th>
+                        <td>66</td>
+                        <td>70</td>
+                        <td>74</td>
+                        <td>80</td>
+                        <td>86</td>
+                    </tr>
+                    <tr>
+                        <th>Waist(inches)</th>
+                        <td>26</td>
+                        <td>27.5</td>
+                        <td>29</td>
+                        <td>31.5</td>
+                        <td>34</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal review start -->
+<div class="modal  fade" id="modal-review" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                <h3 class="modal-title-site text-center">PRODUCT REVIEW </h3>
+            </div>
+            <div class="modal-body">
+
+                <h3 class="reviewtitle uppercase">You're reviewing: Lorem ipsum dolor sit amet</h3>
+
+                <form>
+                    <div class="form-group">
+                        <label>
+                            How do you rate this product? </label> <br>
+
+                        <div class="rating-here">
+                            <input type="hidden" class="rating-tooltip-manual" data-filled="fa fa-star fa-2x"
+                                   data-empty="fa fa-star-o fa-2x" data-fractions="3"/>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rtext">Name</label>
+                        <input type="text" class="form-control" id="rtext" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group ">
+                        <label>Review</label>
+                        <textarea class="form-control" rows="3" placeholder="Your Review" required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success">Submit Review</button>
+                </form>
+
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+
+    </div>
+    <!-- /.modal-dialog -->
+
+</div>
+<!-- /.Modal review -->
+
+}

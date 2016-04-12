@@ -1,0 +1,37 @@
+@(key: String, id: String = "", before_content: Html = Html(""), end_scripts_bottom: Html = Html(""), in_head_content: Html = Html(""))(content: Html)
+
+@import tags._
+
+@head = {
+    	@layouts.fragments.head_min(key)
+        @layouts.fragments.bootstrap_css()
+        @layouts.fragments.pace()
+        
+        @local_stylesheet("stylesheets/home-v7.css")
+        @local_stylesheet("stylesheets/cart-nav.css")
+        @local_stylesheet("stylesheets/product-details-5.css")
+        @local_stylesheet("stylesheets/magnific/magnific-popup.css")
+        
+	    @local_stylesheet("stylesheets/style.css")
+	    @local_stylesheet("stylesheets/main.css")
+
+        @in_head_content
+}
+
+@footer = {
+    @layouts.fragments.footer_min()
+}
+
+@end_scripts = {
+    @layouts.fragments.end_scripts()
+    <script src="@routes.Assets.versioned("javascripts/main.js")"></script>
+    @end_scripts_bottom
+}
+
+@layouts.base(head, footer, id, end_scripts) {
+	@before_content
+
+	@layouts.fragments.navbar()
+
+    @content
+}

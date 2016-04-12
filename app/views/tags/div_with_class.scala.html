@@ -1,0 +1,1 @@
+@(cssClass: String, args: (Symbol,Any)*)(body: => Html)@div((Seq('class -> cssClass) ++ args):_*) {@body}

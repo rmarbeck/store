@@ -1,0 +1,151 @@
+@()
+@import tags._
+
+@end_scripts = {
+
+}
+
+
+@layouts.main("purchase", "purchase", Html(""), end_scripts) {
+<div class="container main-container headerOffset">
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-7 col-xs-6 col-xxs-12 text-center-xs">
+            <h1 class="section-title-inner"><span><i class="glyphicon glyphicon-shopping-cart"></i> Formulaire d'achat</span></h1>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-5 rightSidebar col-xs-6 col-xxs-12 text-center-xs">
+            <h4 class="caps"><a href="#" onclick="history.go(-1)"><i class="fa fa-chevron-left"></i> Retour </a></h4>
+        </div>
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12">
+            <div class="row userInfo">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="w100 clearfix">
+                        <ul class="orderStep orderStepLook2">
+                            <li class="active"><a href="#"> <i class="fa fa-map-marker "></i> <span> addresse de facturation</span>
+                            </a></li>
+                            <li><a href="#"> <i class="fa fa fa-truck  "></i>
+                                <span> Mode de livraison </span></a></li>
+                            <li><a href="#"><i class="fa fa-money  "> </i><span>Moyen de paiement</span> </a></li>
+                            </li>
+                        </ul>
+                        <!--/.orderStep end-->
+                    </div>
+
+
+                    <div class="w100 clearfix">
+                        <div class="row userInfo">
+                            <div class="col-lg-12">
+                                <h2 class="block-title-2"> Adresse à faire figurer sur la facture</h2>
+                            </div>
+
+                            <form>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group required">
+                                        <label for="InputName">Prénom <sup>*</sup> </label>
+                                        <input required type="text" class="form-control" id="InputName"
+                                               placeholder="Prénom">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="InputLastName">Nom <sup>*</sup> </label>
+                                        <input required type="text" class="form-control" id="InputLastName"
+                                               placeholder="Nom">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputEmail">Email </label>
+                                        <input type="text" class="form-control" id="InputEmail" placeholder="Email">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="InputMobile">Numéro de téléphone <sup>*</sup></label>
+                                        <input required type="tel" name="InputMobile" class="form-control"
+                                               id="InputMobile">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+									<div class="form-group required">
+                                        <label for="InputAddress">Addresse <sup>*</sup> </label>
+                                        <input required type="text" class="form-control" id="InputAddress"
+                                               placeholder="Addresse">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputAddress2">Addresse (suite) </label>
+                                        <input type="text" class="form-control" id="InputAddress2"
+                                               placeholder="Addresse">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="InputCity">Ville <sup>*</sup> </label>
+                                        <input required type="text" class="form-control" id="InputCity"
+                                               placeholder="Ville">
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="InputZip">Code Postal <sup>*</sup> </label>
+                                        <input required type="text" class="form-control" id="InputZip"
+                                               placeholder="Code Postal">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputAdditionalInformation">Informations complémentaires</label>
+                                        <textarea rows="3" cols="26" name="InputAdditionalInformation"
+                                                  class="form-control" id="InputAdditionalInformation"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--/row end-->
+
+                    </div>
+                    <div class="cartFooter w100">
+                        <div class="box-footer">
+                            <div class="pull-left"><a class="btn btn-default" href="#" onclick="history.go(-1)"> <i
+                                    class="fa fa-arrow-left"></i> &nbsp; Back to Shop </a></div>
+                            <div class="pull-right"><a class="btn btn-primary btn-small " href="purchase_step2">
+                                Shipping address &nbsp; <i class="fa fa-arrow-circle-right"></i> </a></div>
+                        </div>
+                    </div>
+                    <!--/ cartFooter -->
+
+                </div>
+            </div>
+            <!--/row end-->
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 rightSidebar">
+            <div class="w100 cartMiniTable">
+                <table id="cart-summary" class="std table">
+                    <tbody>
+                    <tr>
+                        <td>Prix de la montre</td>
+                        <td class="price">7690€</td>
+                    </tr>
+                    <tr style="">
+                        <td>Frais de livraison</td>
+                        <td class="price"><span class="success">40€</span></td>
+                    </tr>
+                    <tr style="">
+                        <td>Frais de moyen de paiement</td>
+                        <td class="price"><span class="success">49€</span></td>
+                    </tr>
+                    <tr>
+                        <td> Total</td>
+                        <td class=" site-color" id="total-price">7779€</td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <!--  /cartMiniTable-->
+
+        </div>
+        <!--/rightSidebar-->
+
+    </div>
+    <!--/row-->
+
+    <div style="clear:both"></div>
+</div>
+<!-- /.main-container-->
+<div class="gap"></div>
+
+}

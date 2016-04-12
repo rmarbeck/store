@@ -1,0 +1,31 @@
+@(key: String ="home", id: String = "", before_content: Html = Html(""), end_scripts_bottom: Html = Html(""), in_head_content: Html = Html(""))(content: Html)
+
+@import tags._
+
+@head = {
+    	@layouts.fragments.head_min(key)
+        @layouts.fragments.bootstrap_css()
+        @layouts.fragments.pace()
+            
+	    @local_stylesheet("stylesheets/style.css")
+	    @local_stylesheet("stylesheets/home.css")
+    	
+        @in_head_content
+}
+
+@footer = {
+    @layouts.fragments.footer_min()
+}
+
+@end_scripts = {
+    @layouts.fragments.end_scripts()
+    @end_scripts_bottom
+}
+
+@layouts.base(head, footer, id, end_scripts) {
+	@before_content
+
+	@layouts.fragments.navbar()
+
+    @content
+}
