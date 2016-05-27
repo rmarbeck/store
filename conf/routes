@@ -8,9 +8,16 @@ GET     /index.html		                    controllers.Default.redirect(to = "/")
 
 
 GET		/product							controllers.Application.product()
+GET		/category							controllers.Application.category()
 GET		/purchase							controllers.Application.purchase_prepare()
 GET		/purchase_step2						controllers.Application.purchase_to_step2()
 GET		/purchase_step3						controllers.Application.purchase_to_step3()
+
+GET		/test_s3							controllers.Application.test_s3()
+
+# Payment dialogs
+GET		/purchase/test						controllers.SystemPay.index(trans_id, amount: Int)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET		/assets/*file						controllers.Assets.versioned(path="/public", file: Asset)

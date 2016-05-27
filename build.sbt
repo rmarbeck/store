@@ -9,6 +9,7 @@ scalaVersion := "2.11.6"
 libraryDependencies ++= Seq(
   javaJdbc,
   cache,
+  "com.amazonaws" % "aws-java-sdk" % "1.10.69",
   javaWs
 )
 
