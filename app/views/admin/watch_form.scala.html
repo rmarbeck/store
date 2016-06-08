@@ -1,0 +1,40 @@
+@(thisInstance: Form[models.Watch], isItNew: Boolean)
+
+@import _root_.fr.watchnext.utils.views.FormDisplay
+
+@layouts.admin("watch_form") {
+	@defining(new FormDisplay(thisInstance, "Watch", "admin.watch.form")) { formDisplay =>
+		@{ 
+		   formDisplay.addFormField("externalReference", true, "input");
+		   formDisplay.addFormField("key", true, "input");
+		   formDisplay.addFormFieldForSelect("brand.id", false, models.Brand.getSelectorByDisplayNameAsc);
+		   formDisplay.addFormField("model", true, "input");
+		   formDisplay.addFormField("additionnalModelInfos", true, "textarea");
+		   formDisplay.addFormField("description", true, "textarea");
+		   formDisplay.addFormField("longDescription", true, "textarea");
+		   formDisplay.addFormFieldForSelect("condition", models.Watch.WatchCondition.values.toList)
+		   formDisplay.addFormFieldForSelect("deliveryDelay", models.Watch.WatchDeliveryDelay.values.toList)
+		   formDisplay.addFormFieldForSelect("ownerStatus", models.Watch.WatchOwnerStatus.values.toList)
+		   formDisplay.addFormFieldForSelect("status", models.Watch.WatchStatus.values.toList)
+		   formDisplay.addFormField("reference", true, "input");
+		   formDisplay.addFormField("serial", true, "input");
+		   formDisplay.addFormField("serial2", true, "input");
+		   formDisplay.addFormField("strap", true, "input");
+		   formDisplay.addFormField("size", true, "input", 'type -> "number", 'min -> "0", 'step -> "0.1");
+		   formDisplay.addFormField("movement", true, "input");
+		   formDisplay.addFormFieldForSelect("movementType", models.Watch.MovementType.values.toList)
+		   formDisplay.addFormField("additionnalInfos", true, "textarea");
+		   formDisplay.addFormField("year", true, "input");
+		   formDisplay.addFormField("hasBox", true, "checkbox")
+		   formDisplay.addFormField("hasPapers", true, "checkbox")
+		   formDisplay.addFormField("isNew", true, "checkbox")
+		   formDisplay.addFormField("listPrice", true, "input", 'type -> "number", 'min -> "0", 'step -> "1");
+		   formDisplay.addFormField("sellingPrice", true, "input", 'type -> "number", 'min -> "0", 'step -> "1");
+		   formDisplay.addFormField("oldSellingPrice", true, "input", 'type -> "number", 'min -> "0", 'step -> "1");
+		   formDisplay.addFormField("shouldDisplay", true, "checkbox")
+		}
+	
+	@fr.watchnext.utils.templates.form_with_default_links(formDisplay, isItNew)
+	}
+
+}

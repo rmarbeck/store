@@ -21,8 +21,8 @@ public class S3Helper {
     private static String s3Bucket;
 
     private static void start() {
-        String accessKey = "AKIAJC6OKPJ7HIAP6KVA";
-        String secretKey = "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";
+        String accessKey = "ww";
+        String secretKey = "xx";
         s3Bucket = AWS_SECRET_KEY;
 
         if ((accessKey != null) && (secretKey != null)) {

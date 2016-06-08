@@ -1,5 +1,6 @@
-@()
+@(watch: models.Watch)
 @import tags._
+@import fr.watchnext.utils.tags._
 
 @end_scripts = {
 
@@ -150,11 +151,11 @@
                 <div class="product-details-info-wrapper">
 
 
-                    <h2 class="product-details-product-title">IWC Portugaise 7 Jours</h2>
+                    <h2 class="product-details-product-title">@watch.brand.getDisplayName @watch.model</h2>
 
                     <div class="product-price">
-                        <span class="price-sales">7 890€</span>
-                        <span class="price-standard">8900 €</span>
+                        <span class="price-sales">@display_price(watch.sellingPrice)</span>
+                        <span class="price-standard">@display_price(watch.oldSellingPrice)</span>
                         <span class="price-tag">TTC</span>
                     </div>
 
@@ -277,7 +278,7 @@
 
                                             <p class="desc">
 
-                                                Portugaise 7 jours avec aiguilles et chiffres bleuis. </p>
+                                                @watch.description </p>
 
                                             <p><strong> Montre d'occasion</strong> <br>
                                                 Livrée avec boite et papiers.</p>
@@ -323,16 +324,16 @@
                                             <h3 class="title">Fiche détaillée</h3>
 
 											<ul>
-					                        	<li><span class="label">référence</span><span class="value">116520</span></li>
+					                        	<li><span class="label">référence</span><span class="value">@watch.reference</span></li>
 					                        	<li><span class="label">boitier</span><span class="value">acier</span></li>
-					                        	<li><span class="label">diamètre</span><span class="value">42mm</span></li>
-					                        	<li><span class="label">mouvement</span><span class="value">remontage automatique</span></li>
-					                        	<li><span class="label">bracelet(s)</span><span class="value">acier oyster</span></li>
-					                        	<li><span class="label">année</span><span class="value">2004</span></li>
-					                        	<li><span class="label">état</span><span class="value">excellent (montre d'occasion)</span></li>
-					                        	<li><span class="label">papiers d'origine</span><span class="value"><abbr title="La montre dispose de sa carte de garantie établie lors de son achat neuve.">oui</abbr></span></li>
-					                        	<li><span class="label">boite d'origine</span><span class="value"><abbr title="La montre dispose de sa boite d'origine.">oui</abbr></span></li>
-					                        	<li><span class="label">délais</span><span class="value">la montre est disponible</span></li>
+					                        	<li><span class="label">diamètre</span><span class="value">@{watch.size}mm</span></li>
+					                        	<li><span class="label">mouvement</span><span class="value">@{watch.movementType}</span></li>
+					                        	<li><span class="label">bracelet(s)</span><span class="value">@watch.strap</span></li>
+					                        	<li><span class="label">année</span><span class="value">@watch.year</span></li>
+					                        	<li><span class="label">état</span><span class="value">@watch.condition</span></li>
+					                        	<li><span class="label">papiers d'origine</span><span class="value"><abbr title="La montre dispose de sa carte de garantie établie lors de son achat neuve.">@Messages("yes.no."+watch.hasPapers)</abbr></span></li>
+					                        	<li><span class="label">boite d'origine</span><span class="value"><abbr title="La montre dispose de sa boite d'origine.">@Messages("yes.no."+watch.hasBox)</abbr></span></li>
+					                        	<li><span class="label">délais</span><span class="value">@watch.deliveryDelay</span></li>
 					                       	</ul>
 
                                         </div>

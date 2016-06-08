@@ -1,5 +1,6 @@
 @import tags._
-@()
+@import fr.watchnext.utils.tags._
+@(is_home:Boolean = false, forms_enhancer_active:Boolean = true)
 <!-- Le javascript
 ================================================== -->
 
@@ -22,22 +23,25 @@
 <!-- include mCustomScrollbar plugin //Custom Scrollbar  -->
 @local_script("javascripts/jquery.mCustomScrollbar.js") { }
 
-<!-- include icheck plugin // customized checkboxes and radio buttons   -->
-@local_script("plugins/icheck-1.x/icheck.min.js") { }
-
 <!-- include grid.js // for equal Div height  -->
 @local_script("javascripts/grids.js") { }
 
 <!-- include carousel slider plugin  -->
 @local_script("javascripts/owl.carousel.min.js") { }
 
+@if(forms_enhancer_active) {
+<!-- include icheck plugin // customized checkboxes and radio buttons   -->
+@local_script("plugins/icheck-1.x/icheck.min.js") { }
+
 <!-- jQuery select2 // custom select   -->
 @absolute_script("http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js") { }
+}
 
 <!-- include touchspin.js // touch friendly input spinner component   -->
 @local_script("javascripts/bootstrap.touchspin.js") { }
-
+@if(is_home) {
 <!-- include custom script for only homepage  -->
 @local_script("javascripts/home.js") { }
+}
 <!-- include custom script for site  -->
 @local_script("javascripts/script.js") { }

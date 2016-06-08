@@ -1,5 +1,7 @@
 @()
+@import components._
 @import tags._
+@import fr.watchnext.utils.tags._
 
 @layouts.home() {
 
@@ -111,6 +113,11 @@
         <h3 class="section-title style2 text-center"><span>Nouveautés</span></h3>
 
         <div id="productslider" class="owl-carousel owl-theme">
+        @for(watch <- models.Watch.page(0,10, "", "", "").getList) {
+			@home_watch_box(watch)
+		}
+        
+        
             <div class="item">
                 <div class="product">
                     <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"

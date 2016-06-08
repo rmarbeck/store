@@ -1,0 +1,57 @@
+@(index: Integer = 1)
+@import _root_.fr.watchnext.utils.controllers.ReverseCrudHelperAdapter
+@import tags._
+@import _root_.fr.watchnext.utils.views.SimpleNavbar
+@import fr.watchnext.utils.tags._
+        
+@displaylinks(links:Seq[SimpleNavbar#LinksGroup]) = {
+				@for(linkGroup <- links) {
+              		@if(linkGroup.links.size > 1) {
+	              		@li_activable(10, index, args = 'class -> "dropdown") {
+	              			<a href="#" class="dropdown-toggle" data-toggle="dropdown">@Html(Messages(linkGroup.labelKey)) <b class="caret"></b></a>
+	              			<ul class="dropdown-menu">
+							@for(currentLink <- linkGroup.links) {
+								@li_activable(currentLink.getIndex, index) {<a href="@currentLink.destination">@Messages(currentLink.labelKey)</a>}
+							}
+							</ul>
+						}
+              		} else {
+              			@defining(linkGroup.links.get(0)) { currentLink =>
+              				@li_activable(currentLink.getIndex, index) {<a href="@currentLink.destination">@Messages(currentLink.labelKey)</a>}
+              			}	
+              		}
+              	}
+}
+        
+@defining(new SimpleNavbar("admin.navbar.link")) { navbar =>
+		@{ 	navbar.addBrandLink("home", "#");
+			navbar.addLeftLinksGroup("text.requests").add("text.order.requests", ReverseCrudHelperAdapter.displayAll("Watches",30), false, 20).add("text.buy.requests", "#", false, 25);
+			navbar.addRightLink("text.logout", "#", false, 20);
+			"";
+		}
+		
+		<div class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="@navbar.brandLink.destination">@Messages(navbar.brandLink.labelKey)</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+              	@li_activable(1, index) {<a href="#"><span class="glyphicon glyphicon-home"></span></a>}
+              	@displaylinks(navbar.leftLinks)
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+              	@displaylinks(navbar.rightLinks)
+              </ul>
+            </div>
+          </div>
+        </div>
+
+	
+}

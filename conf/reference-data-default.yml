@@ -1,0 +1,338 @@
+brands:
+    - &Baume !!models.Brand
+         internalName:         Baume
+         seoName:              baume-et-mercier
+         displayName:          Baume & Mercier
+         active:                true
+         logoUrl:              brands/baume-and-mercier.png
+
+    - &BR !!models.Brand
+         internalName:         BR
+         seoName:              bell-and-ross
+         displayName:          Bell & Ross
+         active:                true
+         logoUrl:              brands/bell-and-ross.png
+
+    - &Breitling !!models.Brand
+         internalName:         Breitling
+         seoName:              breitling
+         displayName:          Breitling
+         active:                true
+         logoUrl:              brands/breitling.png
+
+    - &Chanel !!models.Brand
+         internalName:         Chanel
+         seoName:              chanel
+         displayName:          Chanel
+         active:                true
+         logoUrl:              brands/chanel.png
+
+    - &Chopard !!models.Brand
+         internalName:         Chopard
+         seoName:              chopard
+         displayName:          Chopard
+         active:                true
+         logoUrl:              brands/chopard.png
+
+    - &FC !!models.Brand
+         internalName:         FC
+         seoName:              frederique-constant
+         displayName:          Frédérique Constant
+         active:                true
+         logoUrl:              brands/frederique-constant.png
+
+    - &Hamilton !!models.Brand
+         internalName:         Hamilton
+         seoName:              hamilton
+         displayName:          Hamilton
+         active:                true
+         logoUrl:              brands/hamilton.png
+
+    - &Hublot !!models.Brand
+         internalName:         Hublot
+         seoName:              hublot
+         displayName:          Hublot
+         active:                true
+         logoUrl:              brands/hublot.png
+
+    - &IWC !!models.Brand
+         internalName:         IWC
+         seoName:              iwc
+         displayName:          IWC
+         active:                true
+         logoUrl:              brands/iwc.png
+
+    - &Jaeger !!models.Brand
+         internalName:         Jaeger
+         seoName:              jaeger-lecoultre
+         displayName:          Jaeger LeCoultre
+         active:                true
+         logoUrl:              brands/jaeger-lecoultre.png
+
+    - &Longines !!models.Brand
+         internalName:         Longines
+         seoName:              longines
+         displayName:          Longines
+         active:                true
+         logoUrl:              brands/longines.png
+
+    - &Omega !!models.Brand
+         internalName:         Omega
+         seoName:              omega
+         displayName:          Omega
+         active:                true
+         logoUrl:              brands/omega.png
+
+    - &Panerai !!models.Brand
+         internalName:         Panerai
+         seoName:              panerai
+         displayName:          Panerai
+         active:                true
+         logoUrl:              brands/panerai.png
+
+    - &Rado !!models.Brand
+         internalName:         Rado
+         seoName:              rado
+         displayName:          Rado
+         active:                true
+         logoUrl:              brands/rado.png
+
+    - &Rolex !!models.Brand
+         internalName:         Rolex
+         seoName:              rolex
+         displayName:          Rolex
+         active:                true
+         logoUrl:              brands/rolex.png
+
+    - &Tag !!models.Brand
+         internalName:         Tag
+         seoName:              tag-heuer
+         displayName:          Tag Heuer
+         active:                true
+         logoUrl:              brands/tag-heuer.png
+
+    - &Tissot !!models.Brand
+         internalName:         Tissot
+         seoName:              tissot
+         displayName:          Tissot
+         active:                true
+         logoUrl:              brands/tissot.png
+
+    - &Tudor !!models.Brand
+         internalName:         Tudor
+         seoName:              tudor
+         displayName:          Tudor
+         active:                true
+         logoUrl:              brands/tudor.png
+
+    - &Zenith  !!models.Brand
+         internalName:         Zenith
+         seoName:              zenith
+         displayName:          Zenith
+         active:                true
+         logoUrl:              brands/zenith.png
+
+    - &Autre !!models.Brand
+         internalName:         ZzzAutre
+         seoName:              autre-marque-de-montres
+         displayName:          Autre marque
+         active:                true
+         logoUrl:              brands/more.png
+
+    - &Audemars  !!models.Brand
+         internalName:         Audemars
+         seoName:              audemars-piguet
+         displayName:          Audemars Piguet
+         active:                true
+         logoUrl:              brands/audemars.png
+
+    - &Blancpain  !!models.Brand
+         internalName:         Blancpain
+         seoName:              blancpain
+         displayName:          Blancpain
+         active:                true
+         logoUrl:              brands/blancpain.png
+
+    - &Breguet  !!models.Brand
+         internalName:         Breguet
+         seoName:              breguet
+         displayName:          Breguet
+         active:                true
+         logoUrl:              brands/breguet.png
+
+    - &Glashutte  !!models.Brand
+         internalName:         GlashutteOriginal
+         seoName:              glashutte-original
+         displayName:          Glashütte Original
+         active:                false
+         logoUrl:              brands/go.png
+
+    - &Patek  !!models.Brand
+         internalName:         Patek
+         seoName:              patek-philippe
+         displayName:          Patek Philippe
+         active:                false
+         logoUrl:              brands/patek.png
+
+    - &Lange  !!models.Brand
+         internalName:         Lange
+         seoName:              a-lange-und-sohne
+         displayName:          A Lange & Söhne
+         active:                false
+         logoUrl:              brands/lange.png
+
+    - &BRM  !!models.Brand
+         internalName:         BRM
+         seoName:              brm
+         displayName:          B.R.M
+         active:                false
+         logoUrl:              brands/brm.png
+
+    - &GP  !!models.Brand
+         internalName:         GirardPerregaux
+         seoName:              girard-perregaux
+         displayName:          Girard Perregaux
+         active:                false
+         logoUrl:              brands/girardperregaux.png
+
+    - &Hermes  !!models.Brand
+         internalName:         Hermes
+         seoName:              hermes
+         displayName:          Hermès
+         active:                true
+         logoUrl:              brands/hermes.png
+
+    - &Montblanc  !!models.Brand
+         internalName:         Montblanc
+         seoName:              montblanc
+         displayName:          Montblanc
+         active:                false
+         logoUrl:              brands/montblanc.png
+
+    - &RichardMille  !!models.Brand
+         internalName:         RichardMille
+         seoName:              richard-mille
+         displayName:          Richard Mille
+         active:                false
+         logoUrl:              brands/richardmille.png
+
+    - &Vacheron  !!models.Brand
+         internalName:         Vacheron
+         seoName:              vacheron-constantin
+         displayName:          Vacheron Constantin
+         active:                false
+         logoUrl:              brands/vacheron.png
+
+    - &UlysseNardin  !!models.Brand
+         internalName:         UlysseNardin
+         seoName:              ulysse-nardin
+         displayName:          Ulysse Nardin
+         active:                false
+         logoUrl:              brands/ulyssenardin.png
+
+    - &JacquetDroz  !!models.Brand
+         internalName:         JacquetDroz
+         seoName:              jacquet-droz
+         displayName:          Jacquet Droz
+         active:                false
+         logoUrl:              brands/jacquetdroz.png
+
+watches:
+    - &Submariner1 !!models.Watch
+         externalReference:         125
+         key:                        125
+         creationDate:               "2016-05-30 14:00:00"
+         lastModificationDate:       "2016-05-30 14:00:00"
+         brand:                      *Rolex
+         model:                      Submariner
+         additionnalModelInfos:      cadran tritium
+         reference:                  14060
+         serial:                     TBC
+         serial2:                    TBC
+         movement:                   3000
+         movementType:               MECHANICAL_AUTOMATIC
+         size:                       40
+         strap:                      Acier Oyster avec boucle déployante signée
+         additionnalInfos:           En parfait état
+         description:                Submariner sans date
+         longDescription:            Submariner sans date description détaillée
+         privateInfos:               Montre achetée chez Tartampion
+         year:                       1995
+         hasBox:                     true
+         hasPapers:                  true
+         isNew:                      false
+         ownerStatus:                OWNED_BY_US
+         status:                     RESERVED_FOR_A_CUSTOMER
+         condition:                  EXCELLENT_1
+         deliveryDelay:              IN_STOCK_0
+         sellingPrice:               4990
+         oldSellingPrice:            5190
+         listPrice:                  -1
+         shouldDisplay:              true
+
+    - &Submariner2 !!models.Watch
+         externalReference:          126
+         key:                        126
+         creationDate:               "2016-05-30 14:00:00"
+         lastModificationDate:       "2016-05-30 14:00:00"
+         brand:                      *Rolex
+         model:                      Submariner Date
+         additionnalModelInfos:      cadran tritium
+         reference:                  16610
+         serial:                     TBC
+         serial2:                    TBC
+         movement:                   3130
+         movementType:               MECHANICAL_AUTOMATIC
+         size:                       40
+         strap:                      Acier Oyster avec boucle déployante signée
+         additionnalInfos:           En parfait état
+         description:                Submariner date
+         longDescription:            Submariner date description détaillée
+         privateInfos:               Montre achetée chez Tartampion
+         year:                       2008
+         hasBox:                     true
+         hasPapers:                  true
+         isNew:                      false
+         ownerStatus:                OWNED_BY_US
+         status:                     RESERVED_FOR_A_CUSTOMER
+         condition:                  EXCELLENT_1
+         deliveryDelay:              IN_STOCK_0
+         sellingPrice:               5290
+         oldSellingPrice:            5490
+         listPrice:                  -1
+         shouldDisplay:              true
+
+    - &Portugaise !!models.Watch
+         externalReference:          tbc
+         key:                        tbc
+         creationDate:               "2016-05-30 14:00:00"
+         lastModificationDate:       "2016-05-30 14:00:00"
+         brand:                      *IWC
+         model:                      Portugaise Chronographe
+         additionnalModelInfos:      Cadran argent et chiffres bleuis
+         reference:                  IW371446
+         serial:                     TBC
+         serial2:                    TBC
+         movement:                   841324
+         movementType:               MECHANICAL_AUTOMATIC
+         size:                       42
+         strap:                      Cuir sur boucle déployante signés
+         additionnalInfos:           En parfait état
+         description:                Portugaise Chronographe cadran argent et chiffres bleuis
+         longDescription:            Sublime Portugaise Chronographe cadran argent et chiffres bleuis
+         privateInfos:               Montre achetée chez Tartampion
+         year:                       2008
+         hasBox:                     false
+         hasPapers:                  false
+         isNew:                      false
+         ownerStatus:                OWNED_BY_US
+         status:                     RESERVED_FOR_A_CUSTOMER
+         condition:                  EXCELLENT_1
+         deliveryDelay:              IN_STOCK_0
+         sellingPrice:               5900
+         oldSellingPrice:            5900
+         listPrice:                  7600
+         shouldDisplay:              true
+
+#Fin
+

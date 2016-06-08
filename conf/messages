@@ -7,8 +7,111 @@ index.html.title=Boutique Watch Next
 index.html.description=Vente, rachat, courtage de montres de luxe. 
 index.html.keywords=montres, luxe, achat, vente, courtage, courtier, dépôt
 
+home.watch.box.quickview.link.text=Aperçu
+home.watch.box.display.link.text=Voir la fiche
+home.watch.box.watch.is.new.text=Nouveauté
+home.watch.box.watch.is.discounted.text=Prix en baisse
+
 navbar.link.about=A propos
 navbar.link.services=Nos services
 navbar.link.portfolio=Nos montres
 navbar.link.contact=Nous contacter
 
+
+box.and.papers.default={0,choice,-1#| 0#Boite/Papiers| 1#Avec papiers| 2# Avec boite| 2< -}
+box.and.papers.alone={0,choice,-1#| 0#Boite/Papiers| 1#Avec papiers| 2# Avec boite| 2<}
+box.and.papers.in.sentence={0,choice,-1#| 0#avec boite et papiers| 1#avec papiers| 2#avec boite| 2<}
+
+admin.watch.page.title=Montres
+admin.page.text.display.range=Affiche de
+admin.page.text.display.range.to= à '
+
+admin.page.text.display.range.out.of= sur '
+admin.watch.page.brand.display.name=Marque
+admin.watch.page.model=Modèle
+admin.watch.page.description=Description
+admin.watch.page.page.nothing.to.display=Aucune montre à afficher
+admin.action.filter.by=Filtrer par '
+
+
+admin.brand.form.internalname.label.name=Nom interne
+admin.brand.form.internalname.placeholder.name=...
+admin.brand.form.displayname.label.name=Nom
+admin.brand.form.displayname.placeholder.name=...
+admin.brand.form.description.label.name=Description
+admin.brand.form.description.placeholder.name=...
+admin.brand.form.remarks.label.name=Remarques
+admin.brand.form.remarks.placeholder.name=..
+admin.brand.form.seoname.label.name=Nom dans moteur de recherche
+admin.brand.form.seoname.placeholder.name=...
+admin.brand.form.logourl.label.name=URL du logo
+admin.brand.form.logourl.placeholder.name=..
+admin.brand.form.alt.label.name=Alt
+admin.brand.form.alt.placeholder.name=...
+admin.brand.form.active.label.name=Actif
+
+admin.brand.page.displayname=Nom
+admin.brand.page.internalname=Nom interne
+admin.brand.page.description=Description
+admin.brand.page.title=Marques
+brands.html.title=Les marques
+admin.brand.form.title=Formulaire de gestion d''une marque
+
+enum.excellent.1.value=Excellent
+
+admin.watch.form.title=Gestion des montres
+
+admin.watch.form.externalreference.label.name=Référence externe
+admin.watch.form.externalreference.placeholder.name=
+admin.watch.form.key.label.name=Clef
+admin.watch.form.key.placeholder.name=
+admin.watch.form.brand.id.label.name=Marque
+admin.watch.form.brand.id.default.name=Sélectionner la marque
+admin.watch.form.model.label.name=Modèle
+admin.watch.form.model.placeholder.name=
+admin.watch.form.additionnalmodelinfos.label.name=Infos complémentaires sur le modèle
+admin.watch.form.additionnalmodelinfos.placeholder.name=
+admin.watch.form.description.label.name=Description courte
+admin.watch.form.description.placeholder.name=
+admin.watch.form.longdescription.label.name=Description longue
+admin.watch.form.longdescription.placeholder.name=
+admin.watch.form.condition.label.name=Etat
+admin.watch.form.condition.default.name=Sélectionner l''état
+admin.watch.form.condition.value.name.never.worn.0=Jamais portée (0)
+admin.watch.form.condition.value.name.excellent.1=Excellent (1)
+admin.watch.form.condition.value.name.good.2=Bon (2)
+admin.watch.form.condition.value.name.used.3=Occasion (3)
+admin.watch.form.condition.value.name.not.working.4=Défectueux (4)
+admin.watch.form.condition.value.name.for.parts.5=Pour pièces (5)
+admin.watch.form.condition.value.name.unknown.6=Etat inconnu (3)
+admin.watch.form.deliverydelay.label.name=Disponibilité
+admin.watch.form.deliverydelay.default.name=Sélectionner la disponibilité
+admin.watch.form.ownerstatus.label.name=Stock
+admin.watch.form.ownerstatus.default.name=Sélectionner le stock
+admin.watch.form.status.label.name=Statut
+admin.watch.form.status.default.name=Sélectionner le statut
+admin.watch.form.reference.label.name=Référence du modèle
+admin.watch.form.reference.placeholder.name=
+admin.watch.form.serial.label.name=Numéro de série
+admin.watch.form.serial.placeholder.name=
+admin.watch.form.serial2.label.name=Numéro de série complémentaire
+admin.watch.form.serial2.placeholder.name=
+admin.watch.form.strap.label.name=Bracelet
+admin.watch.form.strap.placeholder.name=
+admin.watch.form.size.label.name=Taille de boite
+admin.watch.form.size.placeholder.name=
+admin.watch.form.movement.label.name=Mouvement
+admin.watch.form.movement.placeholder.name=
+admin.watch.form.movementtype.label.name=Type de mouvement
+admin.watch.form.movementtype.default.name=Sélectionner le type de mouvement
+admin.watch.form.additionnalinfos.label.name=Infos complémentaires sur la montre
+admin.watch.form.additionnalinfos.placeholder.name=
+admin.watch.form.year.label.name=Année
+admin.watch.form.year.placeholder.name=
+admin.watch.form.hasbox.label.name=Boîte
+admin.watch.form.haspapers.label.name=Papiers
+admin.watch.form.isnew.label.name=Neuve
+admin.watch.form.listprice.label.name=Prix catalogue
+admin.watch.form.sellingprice.label.name=Prix de vente
+admin.watch.form.oldsellingprice.label.name=Ancien prix de vente
+admin.watch.form.shoulddisplay.label.name=Afficher

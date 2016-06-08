@@ -7,7 +7,7 @@ GET		/									controllers.Application.index()
 GET     /index.html		                    controllers.Default.redirect(to = "/")
 
 
-GET		/product							controllers.Application.product()
+GET		/product/:id						controllers.Application.product(id: Long)
 GET		/category							controllers.Application.category()
 GET		/purchase							controllers.Application.purchase_prepare()
 GET		/purchase_step2						controllers.Application.purchase_to_step2()
@@ -15,8 +15,12 @@ GET		/purchase_step3						controllers.Application.purchase_to_step3()
 
 GET		/test_s3							controllers.Application.test_s3()
 
-# Payment dialogs
-GET		/purchase/test						controllers.SystemPay.index(trans_id, amount: Int)
+GET		/admin/display/:model/All					fr.watchnext.utils.controllers.CrudHelper.displayAll(model: String, d:Int ?=20)
+GET		/admin/display/:model/:id					fr.watchnext.utils.controllers.CrudHelper.display(model: String, id: Long)
+GET		/admin/display/:model/page/					fr.watchnext.utils.controllers.CrudHelper.page(model: String, p:Int ?= 0, s ?= "id", o ?= "desc", f ?= "", d:Int ?=10)
+GET		/admin/create/:model						fr.watchnext.utils.controllers.CrudHelper.create(model: String)
+GET		/admin/edit/:model/:id						fr.watchnext.utils.controllers.CrudHelper.edit(model: String, id: Long)
+POST	/admin/manage/:model						fr.watchnext.utils.controllers.CrudHelper.manage(model: String)
 
 
 # Map static resources from the /public folder to the /assets URL path

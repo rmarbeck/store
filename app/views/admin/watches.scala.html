@@ -1,0 +1,17 @@
+@(currentPage: com.avaje.ebean.PagedList[models.Watch], currentSortBy: String, currentOrder: String, currentFilter: String, currentSize: Integer)
+@import tags._
+@import fr.watchnext.utils.tags._
+@import _root_.fr.watchnext.utils.views.PageDisplay
+
+@layouts.admin("watches", "watches.page") {
+
+@defining(new PageDisplay(currentPage, "model", "admin.watch.page")) { pageDisplay =>
+	@{ pageDisplay.addTableField("brand", "brand.display_name", "getBrandName", false);
+		pageDisplay.addTableField("model", "model", "getModel", false);
+		pageDisplay.addTableField("description", "description", "getDescription", false)
+	}
+	
+	@fr.watchnext.utils.templates.page_with_default_links_and_action(pageDisplay, "Watches", null, currentSortBy, currentOrder, currentFilter, currentSize, true, null)
+}
+}
+

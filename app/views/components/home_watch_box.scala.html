@@ -1,0 +1,27 @@
+@(watch: models.Watch)
+@import fr.watchnext.utils.tags._
+@import tags._
+@import java.lang.String; val quick_view_key="home.watch.box.quickview.link.text";val display_key="home.watch.box.display.link.text"
+@import java.lang.String; val watch_is_new_key="home.watch.box.watch.is.new.text";val watch_is_discounted_key="home.watch.box.watch.is.discounted.text"
+
+			<div class="item">
+                <div class="product">
+                    <div class="image">
+                        <div class="quickview">
+                            <a data-toggle="modal" class="btn btn-xs btn-quickview" href="assets/ajax/product.html" data-target="#productSetailsModalAjax">@Html(Messages(quick_view_key))</a>
+                        </div>
+                        <a href="product"><img src="assets/images/product/@{watch.key}/main.jpg" alt="img" class="img-responsive"></a>
+
+                        <div class="promotion">@if(watch.isNewAddition) {<span class="new-product">@Html(Messages(watch_is_new_key))</span>}
+                        					   @if(watch.isDiscounted) {<span class="discount">@Html(Messages(watch_is_discounted_key))</span>}</div>
+                    	</div>
+                    <div class="description">
+                        <h4><a href="product">@watch.getBrandName - @watch.getModel</a></h4>
+
+                        <p>@takeif(watch.getDescription, 100)</p>
+                        <span class="box-papers">@box_and_papers(watch)</span>
+                    </div>
+                    <div class="price"><span>@display_price(watch.getSellingPrice)</span></div>
+                    <div class="action-control"><a href="@routes.Application.product(watch.getId)" class="btn btn-primary"> <span class="open-product"><i class="glyphicon glyphicon-eye-open">&nbsp;</i> @Html(Messages(display_key)) </span> </a></div>
+                </div>
+            </div>

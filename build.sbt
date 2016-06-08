@@ -2,7 +2,7 @@ name := """store"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayJava)
+lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
 
 scalaVersion := "2.11.6"
 
@@ -10,7 +10,9 @@ libraryDependencies ++= Seq(
   javaJdbc,
   cache,
   "com.amazonaws" % "aws-java-sdk" % "1.10.69",
-  javaWs
+  "fr.watchnext" % "utils_2.11" % "1.0-SNAPSHOT",
+  javaWs,
+  evolutions
 )
 
 includeFilter in (Assets, LessKeys.less) := "*.less"

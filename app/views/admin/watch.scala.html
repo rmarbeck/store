@@ -1,0 +1,31 @@
+@(watch: models.Watch)
+
+@import _root_.fr.watchnext.utils.views.ModelDisplay
+
+@end_body = {
+    <div class="form-group">
+      <!-- <div class="col-sm-offset-1 col-sm-10 text-center">
+      	<a class="btn btn-primary" href="routes.Accounting.addOrderDocumentByWatchToSellId(watch_to_sell.id)"><span class="glyphicon glyphicon-list-alt"></span>@Html(Messages("admin.watchtosell.action.new.order.document"))</a>
+        <a class="btn btn-success" href="routes.Accounting.addInvoiceByWatchToSellId(watch_to_sell.id)"><span class="glyphicon glyphicon-list-alt"></span>@Html(Messages("admin.watchtosell.action.new.invoice"))</a>
+        if(watch_to_sell.customerThatBoughtTheWatch != null) {
+        <a class="btn btn-warning" href="routes.Accounting.addPSellingCByWatchId(watch_to_sell.id)"><span class="glyphicon glyphicon-certificate"></span>@Html(Messages("admin.watchtosell.action.new.waranty"))</a>
+        }                 
+      </div>-->
+    </div>
+}
+
+@layouts.admin("watch", "watches.display") {
+
+@defining(new ModelDisplay(watch, "admin.watch.display")) { modelDisplay =>
+		@{ 	modelDisplay.addField("brand", "getBrandName");
+			modelDisplay.addField("model");
+			modelDisplay.addField("reference");
+			modelDisplay.addField("serial");
+			modelDisplay.addField("sellingPrice", "getSellingPrice", false, null, "price");
+			modelDisplay.addField("condition", "getCondition", false, null, "enum");
+		}
+	
+	@fr.watchnext.utils.templates.display_with_default_links(modelDisplay, "Watches", end_body)
+}
+
+}
